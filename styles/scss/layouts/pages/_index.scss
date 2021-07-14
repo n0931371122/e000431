@@ -1,0 +1,230 @@
+.editor{
+    .index-banner{
+        .jqimgFill{
+            height: 500px;
+        }
+        .swiper-button{
+            margin-top: 0;
+            transform: translateY(-50%);
+            &.swiper-button-prev{
+                left: 40px;
+            }
+            &.swiper-button-next{
+                right: 40px;
+            }
+        }
+        .news-box{
+            max-width: 428px;
+            height: 90px;
+            top: 40px;
+            right: 50px;
+            .box{
+                padding: 15px 25px;     
+                border: 3px solid #fff;
+                background: rgba(0, 0, 0, 0.75);
+                transition: all 0.5s;
+            }
+        }
+    }
+    .case-section{
+        background: #ECF4F2;
+        padding-bottom: 500px;
+        .swiper-container{
+            padding: 0 30px;
+            .swiper-slide{
+                transition:all .3s;
+                transform: scale(0.9);
+                &.swiper-slide-active{
+                    transform: scale(1);
+                    box-shadow: 0 0 26px rgba(0,0,0,0.06);
+                }
+            }
+        }
+        .swiper-button{
+            &.swiper-button-prev{
+                left: -25px;
+            }
+            &.swiper-button-next{
+                right: -25px;
+            }
+        }
+        .swiper-pagination{
+            .swiper-pagination-bullet{
+                width: 10px;
+                height: 10px;
+                background: #B9B9B9;
+                margin: 0 15px;
+                opacity: 1;
+                &.swiper-pagination-bullet-active{
+                    background: #FBAF3D;
+                }
+            }
+        }
+    }
+    .service-section{
+        &::before{
+            content:"";
+            display: block;
+            height: 95px;
+            width: 1px;
+            background:#FEA610 ;
+            position: absolute;
+            top:0;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .item{       
+            transition: all .3s; 
+            &::after{
+                content:"";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: opacity .3s;
+            }
+            &.expand{
+                flex:0 0 34%;
+                &::after{
+                    opacity: 1;
+                }
+                h3{
+                    opacity: 0;
+                }
+                .text{
+                    pointer-events: all;
+                    animation: .3s forwards goUp;
+                    animation-delay: .3s;
+                }
+            }
+            .jqimgFill{
+                height: 700px;
+                &.position-right{
+                    background-position-x: right !important;
+                }
+            }
+            h3{
+                left: 40px;
+                bottom: 47px;
+                transition: opacity .3s;
+            }
+            .text{
+                z-index: 1;
+                left: 0px;
+                padding-left: 40px;
+                padding-right: 40px;
+                bottom: 60px;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity .3s;
+                transform: translateY(100px);
+            }
+        }
+    }
+    @media (max-width:1199px){
+        .index-banner{
+            .news-box{
+                max-width: 250px;
+                height: 85px;
+                right: 20px;
+                .box{
+                    padding: 10px 15px;     
+                    border: 3px solid #fff;
+                    background: rgba(0, 0, 0, 0.75);
+                    transition: all 0.5s;
+                }
+            }
+            .jqimgFill{
+                height: 450px;
+            }
+            .swiper-button{  
+                &.swiper-button-prev{
+                    left: 20px;
+                }
+                &.swiper-button-next{
+                    right: 20px;
+                }
+            }
+        }
+        .case-section .swiper-container{
+            padding: 0;
+            .swiper-slide{
+                 transform: none;   
+            }
+        }
+        .service-section{
+            &::before{
+                height: 60px;
+            }
+            .item{           
+                &::after{
+                    opacity: 1;
+                }
+                &.expand{
+                    flex:0 0 50%;
+                }
+                .jqimgFill{
+                    height: 400px;
+                }
+                h3{
+                    bottom: 40px;
+                    left: 30px;
+                }
+                .text{
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+    @media (max-width:991px){
+        .index-banner{
+            .jqimgFill{
+                height: 400px;
+            }
+            .news-box{
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .service-section{
+            .item{       
+                h3{
+                    left: 20px;
+                }    
+                .text{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+    @media (max-width:767px){
+        .index-banner .swiper-button{
+            &.swiper-button-prev{
+                left: 10px;
+            }
+            &.swiper-button-next{
+                right: 10px;
+            }          
+        }
+        .service-section .item{
+            &.expand{
+                flex:0 0 100%;
+            }
+            h3{
+                bottom: 32px;
+                left: 20px;
+            }
+            .jqimgFill{
+                height: 350px;
+            }
+            
+        }
+    }
+}

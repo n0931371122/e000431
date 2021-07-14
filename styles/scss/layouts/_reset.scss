@@ -1,0 +1,284 @@
+/* ==========================================================================
+	clear
+ ========================================================================== */
+label{
+	margin-bottom: 0;
+	line-height: normal;
+}
+
+textarea {
+	-webkit-appearance: none;
+}
+button,
+input,textarea {
+	line-height: normal;
+	outline: 0;
+	background: transparent;
+	border:0;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+	cursor: default
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	nowhitespace: afterproperty;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+button {
+	border: none;
+	background: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+
+figure,
+address {
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	outline: 0;
+ box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+    public
+ ========================================================================== */
+
+
+body{
+	margin: 0;
+	font-family:"Microsoft JhengHei";
+	font-size: 20px;
+	-webkit-font-smoothing: antialiased;
+	color:black;
+	overflow-x: hidden;
+	line-height: normal;
+	@media (max-width: 1199px){
+		font-size: 18px;
+	}
+	@media (max-width: 767px){
+		font-size: 16px;
+	}
+}
+
+.wp{
+	position: relative;
+	overflow: hidden;
+}
+main{
+	margin-top: 90px;
+	@media (max-width: 1400px){
+		margin-top: 70px;
+	}
+}
+
+.safari body {
+  -webkit-text-size-adjust: none;
+}
+
+
+
+
+/* ==========================================================================
+    public
+ ========================================================================== */
+
+/*不顯示外虛線*/
+button, a {
+	outline: none !important;
+}
+
+a, a:active {
+	color:inherit;
+	cursor: pointer;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration: none; 
+	color:inherit;
+}
+a {
+	transition: color .3s ease-in-out;
+}
+
+
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+	line-height: normal;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+	height: auto;
+	border: none;
+ -o-user-select: none;
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+     user-select: none;
+   image-rendering: -webkit-optimize-contrast;
+}
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+ul.noneStyle {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.noneList{
+	list-style: none;
+}
+ul.noneStyle > li {
+	list-style: none;
+}
+
+
+
+
+textarea {
+	resize: none;
+}
+
+
+
+
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #969696;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #969696;
+}
+
+::-o-placeholder { /* Mozilla Firefox 19+ */
+  color: #969696;
+}
+
+::-ms-placeholder { /* Internet Explorer 10+ */
+  color: #969696;
+}
+
+::-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #969696;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+{
+	-webkit-text-fill-color: black; /*字體顏色*/
+	transition: background-color 5000s ease-in-out 0s; /*透明*/
+
+}
+
+/**/
+
+.scrollbar,
+.scrollbarX,
+.scrollbarY {
+	-webkit-overflow-scrolling: touch;
+
+}
+.scrollbarX {
+	overflow-x: auto;
+}
+
+
+
+
+table {
+	-webkit-backface-visibility: visible;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input {   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	border-radius: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.modal-content{
+	border:0;
+	.modal-dialog{
+		margin: 0;
+	}
+	.close{
+		text-shadow: none;
+		opacity: 1;
+	}
+}
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before{
+	width: auto;
+	margin: 0;
+	line-height: inherit;
+}
+.swiper-button-prev,
+.swiper-button-next{
+	&::after{
+		display: none;
+	}
+}
