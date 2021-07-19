@@ -1,0 +1,78 @@
+.promotions-section{
+    .filter{
+        label{
+            &::before,
+            &::after{
+                content: '';
+                position: absolute;
+            }
+            &::before{
+                top: 4px;
+                left: 0px;
+                width: 12.5px;
+                height: 12.5px;
+                border: 1px solid #FBAF3D;
+                transition: all .3s; 
+            }
+            &::after{
+                top: 6px;
+                left: 2px;
+                width: 9px;
+                height: 9px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                opacity: 0;
+                transition: all .3s;            
+                background-image: url(images/svg/checked.svg);
+            }
+        }
+        input{
+            display: none;
+            &:checked+label{
+                &::before{
+                    background:#FBAF3D ;
+                }
+                &::after{
+                    opacity: 1;
+                }
+            }
+        }
+        .factor-content,
+        .factor-sub-content{
+            display: none;
+        }
+        .factor-toggle{
+            &.active{
+                img{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .factor-sub-toggle{
+            &.active{
+                .sub-toggle-icon{              
+                    &::after{
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+            .sub-toggle-icon{
+                &::before,
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: calc(50% - 5px);
+                    width: 10px;
+                    height: 1px;
+                    background: #959595;
+                }
+                &::after{
+                    transform: rotate(90deg);
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+}

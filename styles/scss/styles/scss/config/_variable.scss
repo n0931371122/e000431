@@ -1,0 +1,16 @@
+
+$green6FBA44:#6FBA44;
+$green0BBD6E:#0BBD6E;
+$green006938:#006938;
+$black:#141414;
+$blue:#04529B;
+$blue055DAE:#055DAE;
+$lightBlue:#0EB8EC;
+$gray646464:#646464;
+$grayC8C8C8:#C8C8C8;
+$gray32323205:rgba(32,32,32,0.5);
+$grayCDCDCD:#CDCDCD;
+$gray969696:#969696;
+@mixin fz($size) {
+  font-size: $size;
+}

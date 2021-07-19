@@ -1,0 +1,27 @@
+.links-section{
+    .title{
+        position: relative;
+        &:before{
+            content:"";
+            height: 1px;
+            width: 100%;
+            background: rgba(149,149,149,0.5);
+            position: absolute;
+            top: 78px;
+            left: 0;
+        }
+    }
+    .content a{
+        height: 160px;
+    }
+    @media(max-width:1199px){
+        .content a:hover{
+            box-shadow: none;
+        }
+    }
+    @media(max-width:991px){
+        .content a{
+            height: auto;
+        }
+    }
+}

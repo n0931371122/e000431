@@ -1,0 +1,259 @@
+.download-section{
+    
+    ul{
+        
+        li{
+            border-bottom: 1px solid rgba(149, 149, 149, 0.3);
+            &.open{
+                border-bottom: none; 
+                button{
+                    font-weight: 700;
+                    .circle{
+                        transform: rotate(180deg);
+                        background-color: #FBAF3D;
+                        color:white;
+                    }
+                }
+            }
+            button{
+                &:hover{
+                    .circle{
+                        color:white;
+                        background-color: #FBAF3D;
+                    }
+                }
+                .circle{
+                    color:#FBAF3D;
+                    width: 22px;
+                    height: 22px;
+                    transition: all 0.3s;
+                }
+                
+            }
+            .tableBox{
+                display: none;
+                width: 100%;
+            }
+        }
+    }
+    
+    table{
+        thead{
+            tr{
+                th{
+                    &+th{
+                        &::before{
+                            position: absolute;
+                            display: block;
+                            content: "";
+                            left: 0;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            width: 1px;
+                            height: 20px;
+                            background-color: rgba(255, 255, 255, 0.5);
+                        }
+                    }
+
+                    &:first-child{
+                        width: 16%;
+                    }
+                    &:nth-child(2){
+                        width: 64.5%;
+                    }
+                }
+            }
+
+        }
+        tbody{
+            tr{
+                &:first-child{ 
+                    padding: 0;
+                    height: 5.5px;
+                }
+                &:hover{
+                    td{
+                        color: #000000;
+                    }
+                }
+                td{
+                    color: #959595;
+                    position: relative;
+                    transition: all 0.3s;
+                    &+td{
+                        &::before{
+                            position: absolute;
+                            display: block;
+                            content: "";
+                            left: 0;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            width: 1px;
+                            height: 20px;
+                            background-color: rgba(204, 204, 204, 0.5);
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            img{
+                                position: relative;
+                                z-index: 1;
+                                width: 32.8px;
+                                height: auto;
+                            }
+                            &:hover{
+                                img{
+                                     text-shadow: 0 0 5px rgba(0,0,0,0.3);
+                                }
+                               
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+  .wp.download .dataBox .tables .container {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li button {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li button {
+    padding: 15px 0 18px 0;
+  }
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li button .circle {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li button .circle .svg {
+    width: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li .tableBox {
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table thead {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table thead tr th:nth-child(2) {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table thead tr th:last-child {
+    width: 19%;
+    min-width: 140px;
+  }
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td {
+    font-size: 0.938rem;
+  }
+}
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td {
+    padding: 0 4px;
+  }
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td {
+    flex: 0 0 100%;
+    padding: 5px 10px !important;
+    padding-left: 6em !important;
+  }
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td::after {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td::before {
+    content: attr(data-th) "：";
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-weight: 700;
+    color: #000000;
+  }
+}
+
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td:first-child {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td:nth-child(2) {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td:last-child {
+    padding: 15px 10px;
+  }
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td:last-child {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td:last-child a + a {
+    margin-left: 15px;
+  }
+}
+.wp.download .dataBox .tables .container ul li .tableBox table tbody tr td:last-child a img {
+  position: relative;
+  z-index: 1;
+  width: 32.8px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .wp.download .dataBox .tables .container ul li .tableBox table tbody tr td:last-child a img {
+    width: 28px;
+  }
+}

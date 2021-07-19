@@ -1,0 +1,41 @@
+.about-section{
+    .col-img{
+        width: 650px;
+    }
+    .gray-msak{
+        position: relative;
+        &::after{
+            content:"";
+            background: rgba(0,0,0,0.3);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    @media(max-width:1600px){
+        .col-img{
+            width: 600px;
+        } 
+    }
+    @media(max-width:1400px){
+        .col-img{
+            width: 400px;
+        } 
+    }
+    @media(max-width:1199px){ 
+        .col-img{
+            width: auto;
+        } 
+    }
+    @media(max-width:767px){
+        .gray-msak{
+            &::after{
+                opacity: 1;
+            }
+        }
+    }
+}

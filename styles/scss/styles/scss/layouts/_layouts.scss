@@ -1,0 +1,153 @@
+html.menuOpen{
+	overflow: hidden;
+	.menu-wrapper{
+		transform: none;
+	}
+}
+header{
+	height: 90px;
+	.logo{
+		width: 250px;
+		margin-left: 76px;
+	}
+	.menu-wrapper{
+		display: flex;
+		align-items: center;
+		.menu{
+			margin-right: 10px;
+			li a{
+				padding: 8px 16px;
+			}
+			
+		}
+		
+	}
+	.complex{
+		margin-right: 68px;
+	}
+	.menu-toggle div{
+		height: 2px;
+		background-color: #FBAF3D;
+		width: 20px;
+	}
+
+	form{
+        ::-webkit-input-placeholder { /* WebKit browsers */
+        color: black;
+        }
+
+        ::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: black;
+        }
+
+        ::-o-placeholder { /* Mozilla Firefox 19+ */
+        color: black;
+        }
+
+        ::-ms-placeholder { /* Internet Explorer 10+ */
+        color: black;
+        }
+
+        ::-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: black;
+        }
+		input{
+			width: 168px;
+		}
+	}
+	@media screen and(max-width:1800px){
+		.logo{
+			margin-left: 0;
+		}
+		.menu-wrapper .menu li a{
+			padding: 8px 10px;
+		}
+		.complex{
+			margin-right: 0;
+		}
+	}
+	@media screen and(max-width:1600px){
+		.logo{
+			width: 200px;
+		}
+		.menu-wrapper .menu li a{
+			padding: 8px 4px;
+		}
+	}
+	@media screen and(max-width:1400px){
+		height: 70px;
+		.logo{
+			width: 250px;
+		}
+		.menu-wrapper{
+			overflow-y:auto;
+			position: fixed;
+			display: block;
+			width: 100%;
+			max-width: 414px;
+			top: 70px;
+			right: 0;
+			height:calc(100vh - 70px);
+			transform: translateX(100%);
+			transition: all 0.5s;
+			padding: 20px;
+			.menu{
+				margin-right: 0;
+				padding-bottom: 20px;
+				li a{
+					padding: 18px 0px;
+					border-bottom:1px solid rgba(0,0,0,0.5);
+				}
+				
+			}
+		}
+	} 
+	@media screen and(max-width:768px){
+		.logo{
+			width: 200px;
+		}
+	}
+	@media screen and(max-width:575px){
+		.logo{
+			width: 170px;
+		}
+		.menu-wrapper{
+			padding-top: 10px;
+			.menu li a{
+				padding: 15px 0;
+			}
+			
+		}
+	}
+}
+footer{
+	.title{
+		padding-bottom: 12px;
+		&::after{
+			content:"";
+			width: 30px;
+			height:1px;
+			background: rgba(255,255,255,0.7);
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	@media screen and(max-width:1199px){
+		.font-18{
+			font-size: 16px;
+		}	
+	}
+	@media screen and(max-width:767px){
+		font-size: 15px;
+		.text-FBAF3D{
+			justify-content: center;
+		}
+		.les10{
+			letter-spacing: 8px;
+		}
+		.font-18{
+			font-size: 15px;
+		}	
+	}
+}

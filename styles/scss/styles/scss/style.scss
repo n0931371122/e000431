@@ -1,0 +1,29 @@
+@charset 'utf-8';
+@import url('scss/plugins/bootstrap.min.css');
+@import url('scss/plugins/mCustomScrollbar.css');
+@import url('scss/plugins/swiper-bundle.min.css');
+@import url('scss/plugins/aos.css'); 
+@import url('font/css/fontello.css'); 
+@import url('scss/plugins/bootstrap-select.min.css');
+@import url('scss/plugins/jquery.fancybox.min.css');
+@import url('scss/plugins/jquery.flipbox.css');
+// config
+@import 'config/_variable.scss';
+@import 'config/_config.scss';
+@import 'config/_fontSize.scss';
+// layouts
+@import 'layouts/_reset.scss';
+@import 'layouts/_common.scss';
+@import 'layouts/_layouts.scss';
+@import 'layouts/_keyframes.scss';
+
+// pages
+
+@import 'layouts/pages/_index.scss';
+@import 'layouts/pages/_search.scss';
+@import 'layouts/pages/_about.scss';
+@import 'layouts/pages/_news.scss';
+@import 'layouts/pages/_promotions.scss';
+@import 'layouts/pages/_service.scss';
+@import 'layouts/pages/_links.scss';
+@import 'layouts/pages/_download.scss';
